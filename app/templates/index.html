@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}{{ config.PROJECT_NAME }} {% endblock title %}
+{% block page_content %}
+    <div class="page-header"
+
+        <h3>Hello,
+            {% if current_user.is_authenticated %}
+                {{ current_user.username | capitalize }}
+                , happy to see you again!
+            {% else %}
+                Stranger. Pleased to meet you!
+            {% endif %}
+        </h3>
+
+    </div>
+{% endblock page_content %}
