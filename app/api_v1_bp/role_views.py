@@ -1,12 +1,12 @@
 from flask import jsonify
-from authentication_views import auth
+from .authentication_views import auth
 from . import api_bp
 from ..decorators import permissions_required
 from .. import models
 from sqlalchemy.orm.exc import NoResultFound
 
 
-from errors import RestApiErrors
+from .errors import RestApiErrors
 
 @permissions_required(['admin'])
 @api_bp.route('/role/<int:id>')
