@@ -1,5 +1,5 @@
 from flask import jsonify, request, abort
-from authentication_views import auth
+from .authentication_views import auth
 from . import api_bp
 from ..decorators import permissions_required
 from .. import models
@@ -20,7 +20,7 @@ from .. import db
 #     roles = Role.query.all()
 #     return jsonify({'roles': [role.name for role in roles]})
 
-from errors import RestApiErrors
+from .errors import RestApiErrors
 
 
 @permissions_required(['admin'])

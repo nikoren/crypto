@@ -2,7 +2,7 @@ from flask import g, jsonify, current_app
 from flask_httpauth import HTTPBasicAuth
 from ..models import AnonymousUser, User, Role
 from sqlalchemy.orm.exc import NoResultFound
-from errors import RestApiErrors
+from .errors import RestApiErrors
 from . import api_bp
 from ..decorators import permissions_required
 

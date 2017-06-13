@@ -2,9 +2,7 @@ import time
 from abc import ABCMeta, abstractmethod
 from mixins import ConfigMixin
 
-class Client(ConfigMixin):
-    __metaclass__ = ABCMeta
-
+class Client(ConfigMixin, metaclass=ABCMeta):
     def __init__(self, api_key, api_secret, **kwargs):
         self.api_key = api_key
         self.api_secret = api_secret

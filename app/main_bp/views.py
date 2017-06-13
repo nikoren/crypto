@@ -27,7 +27,7 @@ def read_only_required():
 @main_bp.route('/clear_session/<value>')
 def clear_session(value='all'):
     if value != 'all':
-        if value in session.keys():
+        if value in list(session.keys()):
             session[value] = None
             flash('{} was removed from session'.format(value))
     else:

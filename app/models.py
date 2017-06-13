@@ -147,7 +147,7 @@ class User(UserMixin, db.Model):
                 )
 
             # User in DB - update it per need
-            for cfg_att_name in cfg_user.keys():
+            for cfg_att_name in list(cfg_user.keys()):
                 if not (cfg_att_name.startswith('_') or
                         cfg_att_name == 'role'):
                     if getattr(db_user,cfg_att_name) != getattr(cfg_user, cfg_att_name):
@@ -395,7 +395,7 @@ class Role(db.Model):
                     description=cfg_role.get('description')
                 )
 
-            for cfg_attr in cfg_role.keys():
+            for cfg_attr in list(cfg_role.keys()):
                 # current_app.logger.debug('cfg_attr is {}'.format(cfg_attr))
                 if not cfg_attr.startswith('_'):
                     if getattr(db_role, cfg_attr) != cfg_role.get(cfg_attr):

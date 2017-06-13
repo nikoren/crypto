@@ -99,7 +99,7 @@ def confirm(token):
     so that when the users click on the link from the confirmation email
     they are asked to log in before they reach this view function.
     '''
-    print 'Confirming {}'.format(token)
+    print('Confirming {}'.format(token))
     if current_user.confirmed:
         # User has already finish email confirmation
         return redirect(url_for('main_bp.index'))

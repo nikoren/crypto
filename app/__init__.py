@@ -36,13 +36,13 @@ def create_app(config_name):
     celery.conf.update(app.config)
 
     # Attach routes and custom errors here
-    from main_bp import main_bp
+    from .main_bp import main_bp
     app.register_blueprint(main_bp)
 
-    from auth_bp import auth_bp
+    from .auth_bp import auth_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
 
-    from api_v1_bp import api_bp
+    from .api_v1_bp import api_bp
     app.register_blueprint(api_bp, url_prefix='/api/v1')
 
     return app
