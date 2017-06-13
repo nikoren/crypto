@@ -1,6 +1,8 @@
 # Crypto
 
 Bitcoin trading application
+
+[![CircleCI](https://circleci.com/gh/nikoren/crypto/tree/master.svg?style=svg)](https://circleci.com/gh/nikoren/crypto/tree/master)
   
 ### Configuration `config.py`
 - Main db is Postgresql , sqlite is not fully supports all the features but can be used for basic setup
@@ -24,3 +26,4 @@ db.create_all()
  * Debugger is active!
 
 ```
+
