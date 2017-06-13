@@ -5,4 +5,4 @@ class Bit2c(Parser):
         super(Bit2c, self).__init__()
 
     def parse_tickers(self, tickers):
-        print self.convert_headers(tickers)
+        print(self.convert_headers(tickers))
