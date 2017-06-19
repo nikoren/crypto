@@ -16,14 +16,17 @@ Bitcoin trading application
 ### Getting started
 
 ```bash
-# clone this project
-pip install -r requirements.txt
-python manage.py shell 
-db.create_all()
-╰─$ python manage.py runserver
- * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
- * Restarting with stat
- * Debugger is active!
 
+git clone git@github.com:nikoren/crypto.git
+# make sure you have python3.6 installed
+venv_path=/path/to/crypto_venv
+python -m venv $venv_path
+source  $venv_path/bin/activate
+# install dependencies
+pip install -r requirements.txt
+cd app
+ipython
+from cryptotrader2 import main
+main()
 ```
 
