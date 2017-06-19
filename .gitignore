@@ -1,0 +1,4 @@
+*__pycache__*
+*.idea*
+.vagrant
+3.6_flask
